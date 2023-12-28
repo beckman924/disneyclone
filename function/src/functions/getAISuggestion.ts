@@ -19,9 +19,9 @@ export async function getAISuggestion(
 ): Promise<HttpResponseInit> {
   context.log(`Http function processed request for url "${request.url}"`);
 
-  try {
-    const term = request.query.get("term");
+  const term = request.query.get("term");
 
+  try {
     const completion = await openai.chat.completions.create({
       model: "gpt-3.5-turbo",
       messages: [
@@ -41,11 +41,14 @@ export async function getAISuggestion(
       ],
     });
 
-    console.log(completion.choices[0]);
-
     return { body: completion.choices[0].message.content || "No suggestions" };
   } catch (error) {
-    console.log(error);
+    console.log("ERROR >>> ", error);
+
+    return {
+      status: 500,
+      body: error,
+    };
   }
 }
 
