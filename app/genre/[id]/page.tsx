@@ -1,16 +1,18 @@
 type Props = {
   params: {
-    id: string
-  }
+    id: string;
+  };
   searchParams: {
-    genre: string
-  }
-}
+    genre: string;
+  };
+};
 
-function GenrePage ({ params: { id }, searchParams: { genre } }: Props) {
+function GenrePage({ params: { id }, searchParams: { genre } }: Props) {
   return (
-    <div>Welcome to the genre with id: {id} and name: {genre}</div>
-  )
+    <div>
+      Welcome to the genre with id: {id} and name: {genre}
+    </div>
+  );
 }
 
-export default GenrePage
+export default GenrePage;
