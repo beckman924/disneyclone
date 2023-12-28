@@ -1,21 +1,21 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 
-import './globals.css'
-import Header from '@/components/Header'
-import { ThemeProvider } from "@/components/theme-provider"
+import "./globals.css";
+import Header from "@/components/Header";
+import { ThemeProvider } from "@/components/theme-provider";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Disney+ Clone',
-  description: 'For education purposes only',
-}
+  title: "Disney+ Clone",
+  description: "For education purposes only",
+};
 
-export default function RootLayout ({
+export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -26,11 +26,11 @@ export default function RootLayout ({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
+          {/* <Header /> */}
 
           {children}
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }
