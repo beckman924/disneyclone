@@ -1,6 +1,6 @@
 # Disney+ Clone Project
 
-This project is a Disney+ clone developed using Next.js 14 with advanced features such as caching and server requests to provide an efficient and fast user experience. Additionally, it incorporates The Movie Database (TMDB) API to fetch detailed information about movies. The TMDB API provides data on a wide variety of movies, including details such as title, description, genre.
+This project is a Disney+ clone developed using Next.js 14 with advanced features such as caching and server requests to provide an efficient and fast user experience. Additionally, it incorporates The Movie Database (TMDB) API to fetch detailed information about movies. The TMDB API provides data on a wide variety of movies, including details such as title, description, genre, year of release.
 
 ## Features
 
